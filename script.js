@@ -62,7 +62,7 @@ if (registerForm) {
         const email = registerForm.email.value;
         try {
             const response = await register(name, password, email);
-           location.href = "/login.html";
+           location.href = "./login.html";
         } catch (error) {
             alert(error);
         }
@@ -79,7 +79,7 @@ if (loginForm) {
         try {
             const response = await login( email, password);
             localStorage.setItem("user", JSON.stringify(response));
-           location.href = "/home.html";
+           location.href = "./home.html";
         } catch (error) {
             alert(error);
         }
@@ -95,10 +95,10 @@ if (home) {
       document.getElementById("logout")
        .addEventListener("click", () => {
             localStorage.removeItem("user");
-            location.href = "/login.html";
+            location.href = "./login.html";
         });
     } else {
-        location.href = "/login.html";
+        location.href = "./login.html";
 
     }
 
