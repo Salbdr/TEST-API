@@ -79,7 +79,7 @@ if (loginForm) {
         try {
             const response = await login( email, password);
             localStorage.setItem("user", JSON.stringify(response));
-           location.href = "./home.html";
+           location.href = "./home1.html";
         } catch (error) {
             alert(error);
         }
